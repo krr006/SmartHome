@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Мой веб-сайт{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+              <li><a href="{% url 'home' %}" class="smooth-transition">Домой</a></li>
+              <li><a href="{% url 'about' %}" class="smooth-transition">О нас</a></li>
+              <li><a href="{% url 'contact' %}" class="smooth-transition">Контакты</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <!-- Ваш футер -->
+    </footer>
+</body>
+</html>

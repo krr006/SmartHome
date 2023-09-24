@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <style>
+        /* {% load static %} */
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .home-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #0077cc;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>О нас</h1>
+        <p>Мы - ваш надежный партнер в создании умных домов, где технологии служат вашему комфорту и безопасности. Мы предлагаем передовые решения для автоматизации вашего дома, контроля освещения, климата, безопасности и многое другое. Наши специалисты готовы воплотить ваши идеи в реальность и создать дом вашей мечты.</p>
+
+        <!-- Включаем изображение умного дома -->
+        <img src="{% static 'sm.png' %}" alt="Умный дом" class="about-image">
+
+        <!-- Добавляем кнопку перехода на домашнюю страницу -->
+        <a class="home-link" href="{% url 'home' %}">Перейти на домашнюю страницу</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* Добавляем плавные переходы для ссылок */
+a {
+    color: #333; /* Цвет текста ссылки по умолчанию */
+    background-color: transparent; /* Фон ссылки по умолчанию */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Изменяем цвет ссылок при наведении */
+a:hover {
+    color: #ff6600; /* Новый цвет текста ссылки при наведении */
+    background-color: #fff; /* Новый фон ссылки при наведении */
+}

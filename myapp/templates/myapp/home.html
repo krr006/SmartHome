@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя страница</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <style>
+        /* {% load static %} */
+        body {
+            background-image: url("{% static 'ssa.png' %}");
+            background-size: 50% auto;
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Плавные переходы для ссылок */
+        .smooth-transition a {
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .smooth-transition a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой веб-сайт!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="smooth-transition"><a href="{% url 'about' %}">О нас</a></li>
+            <li class="smooth-transition"><a href="{% url 'contact' %}">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>О нас</h2>
+            <p>Здесь вы можете узнать больше о нашей компании и наших ценностях.</p>
+        </section>
+
+        <section>
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами по следующим контактам:</p>
+            <ul>
+                <li>Email: contact@example.com</li>
+                <li>Телефон: +123456789</li>
+                <li>Адрес: ул. Примерная, 12345</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Все права защищены.</p>
+    </footer>
+</body>
+</html>
