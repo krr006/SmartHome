@@ -1,4 +1,4 @@
-# Умный дом "SmartHouse"
+# Умный дом "SmartHome"
 
 ![SmartHouse](foreadme.jpg)
 
