@@ -4,71 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Домашняя страница</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
-        /* {% load static %} */
         body {
-            background-image: url("{% static 'ssa.png' %}");
-            background-size: 50% auto;
-            background-position: right top;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-color: #B0C4DE;
             padding: 20px;
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
+            font-family: 'Roboto', sans-serif; /* Изменим шрифт на Roboto */
+            color: #000;
             margin: 0;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        nav {
+            background-color: #333;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
-        h1 {
-            font-size: 36px;
-            color: #333;
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between; /* Распределяем кнопки по всей ширине */
         }
 
-        p {
-            font-size: 18px;
-            color: #333;
+        li {
+            margin: 0;
         }
 
-        .about-image {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        /* Плавные переходы для ссылок */
         .smooth-transition a {
-            transition: background-color 0.3s, color 0.3s;
-            display: inline-block;
-            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 60px; /* Увеличим размер кнопок в два раза (изначально было 20px 30px) */
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             text-align: center;
             text-decoration: none;
             font-size: 18px;
             margin: 10px;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            flex: 1; /* Делаем, чтобы кнопки занимали всю доступную ширину */
         }
 
         .smooth-transition a:hover {
-            background-color: #333;
-            color: #fff;
+            background-color: #B0C4DE;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на мой веб-сайт!</h1>
+        <h1 style="font-size: 36px; color: #333;">Добро пожаловать на мой веб-сайт!</h1>
     </header>
 
     <nav>
@@ -78,24 +63,10 @@
             <li class="smooth-transition"><a href="{% url 'catalog' %}">Каталог</a></li>
         </ul>
     </nav>
-
     <main>
-        <section>
-            <h2>О нас</h2>
-            <p>Здесь вы можете узнать больше о нашей компании и наших ценностях.</p>
-        </section>
 
-        <section>
-            <h2>Контакты</h2>
-            <p>Свяжитесь с нами по следующим контактам:</p>
-            <ul>
-                <li>Email: contact@example.com</li>
-                <li>Телефон: +123456789</li>
-                <li>Адрес: ул. Примерная, 12345</li>
-            </ul>
-        </section>
+        <p>Мы предлагаем широкий ассортимент продукции высокого качества. Познакомьтесь с нашими услугами и товарным предложением, а также свяжитесь с нами, чтобы узнать больше.</p>
     </main>
-
     <footer>
         <p>&copy; 2023 Все права защищены.</p>
     </footer>

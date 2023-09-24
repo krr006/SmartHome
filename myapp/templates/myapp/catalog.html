@@ -4,10 +4,26 @@
     <title>Каталог товаров</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #B0C4DE;
             text-align: center;
             padding: 20px;
+            color: #000;
+            margin: 0;
+        }
+
+        .home-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            background-color: #0077cc;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px; /* Увеличиваем размер шрифта */
+            font-family: 'Montserrat', sans-serif; /* Добавляем красивый шрифт Montserrat */
+            background-image: linear-gradient(135deg, #ff6a00, #ee0979); /* Органичный фон */
         }
 
         h1 {
@@ -45,19 +61,10 @@
             margin-top: 20px;
             border-radius: 5px;
         }
-
-        .home-link {
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
-            background-color: #0077cc;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
+    <a class="home-link" href="{% url 'home' %}">На главную</a>
     <h1>Каталог товаров</h1>
     <ul>
         {% for product in products %}
@@ -69,6 +76,5 @@
             </li>
         {% endfor %}
     </ul>
-    <a class="home-link" href="{% url 'home' %}">Перейти на домашнюю страницу</a>
 </body>
 </html>
