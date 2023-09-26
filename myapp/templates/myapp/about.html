@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас</title>
+    {% load static %}
     <style>
-        /* {% load static %} */
         body {
-            background-color: #f0f0f0;
+            background: #000033; /* Темный космический фон */
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
             margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: left;
+            padding: 10px;
+            border-radius: 20px;
+            border-radius: 20px;
+        }
+
+        ul {
+            list-style: none;
             padding: 0;
-            font-family: Arial, sans-serif;
+        }
+
+        li {
+            margin: 0;
+            display: inline;
         }
 
         .container {
@@ -18,51 +37,49 @@
             margin: 0 auto;
             padding: 20px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #B0C4DE;
+            color: #333;
         }
 
         h1 {
             font-size: 36px;
-            color: #333;
+            color: #fff; /* Изменим цвет заголовка на белый */
         }
 
         p {
             font-size: 18px;
-            color: #666;
-        }
-
-        .about-image {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        .home-link {
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
-            background-color: #0077cc;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
+  <header>
+      <h1>О нас</h1>
+  </header>
+    <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Перейти на главную страницу</a></li>
+          <li><a href="{% url 'catalog' %}">Каталог</a></li>
+        <ul>
+    </nav>
     <div class="container">
-        <h1>О нас</h1>
-        <p>Мы - ваш надежный партнер в создании умных домов, где технологии служат вашему комфорту и безопасности. Мы предлагаем передовые решения для автоматизации вашего дома, контроля освещения, климата, безопасности и многое другое. Наши специалисты готовы воплотить ваши идеи в реальность и создать дом вашей мечты.</p>
-
-        <!-- Включаем изображение умного дома -->
-        <img src="{% static 'sm.png' %}" alt="Умный дом" class="about-image">
-
-        <!-- Добавляем кнопку перехода на домашнюю страницу -->
-
-        <a class="home-link" href="{% url 'home' %}">Перейти на главную страницу</a>
-        <!-- <li class="smooth-transition"><a href="{% url 'home' %}">Перейти на домашнюю страницу</a></li> -->
+        <p>Мы - надежная компания, специализирующаяся на внедрении умных домов и автоматизации жилых пространств. Мы заботимся о наших клиентах уже много лет и предлагаем передовые решения для вашего комфорта и безопасности. Наши высококвалифицированные специалисты готовы воплотить ваши идеи в реальность и создать умный дом вашей мечты.</p>
     </div>
 </body>
 </html>

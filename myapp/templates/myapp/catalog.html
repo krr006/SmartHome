@@ -5,10 +5,10 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #B0C4DE;
+            background-color: #080808;
             text-align: center;
             padding: 20px;
-            color: #000;
+            color: #fff;
             margin: 0;
         }
 
@@ -20,39 +20,60 @@
             background-color: #0077cc;
             color: #fff;
             padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 20px; /* Увеличиваем размер шрифта */
-            font-family: 'Montserrat', sans-serif; /* Добавляем красивый шрифт Montserrat */
-            background-image: linear-gradient(135deg, #ff6a00, #ee0979); /* Органичный фон */
+            border-radius: 20px; /* Увеличил радиус для округлых краев */
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, color 0.3s; /* Переходы при наведении */
+        }
+
+        .home-link:hover {
+            background-color: #0055aa; /* Изменен цвет фона при наведении */
+            color: #fff; /* Изменен цвет текста при наведении */
         }
 
         h1 {
             font-size: 36px;
-            color: #333;
+            color: #fff;
+            background-color: #080808;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         li {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #000033;
+            border: 1px solid #333;
             border-radius: 5px;
             margin: 20px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s; /* Переходы при наведении */
+            cursor: pointer; /* Смена курсора при наведении */
+        }
+
+        li:hover {
+            background-color: #000066; /* Изменен цвет фона при наведении */
+            transform: scale(1.05); /* Увеличение размера при наведении */
         }
 
         h2 {
             font-size: 24px;
-            color: #333;
+            color: #fff;
         }
 
         p {
             font-size: 18px;
-            color: #666;
+            color: #ccc;
         }
 
         img {
@@ -69,14 +90,12 @@
     <ul>
         {% for product in products %}
             <li>
-                <h2><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h2>
-                <p>{{ product.short_description }}</p>  <!-- Используем короткое описание -->
-                <p>Цена: ${{ product.price }}</p>
+                <h2><a href="{% url 'product_detail' product.id %}" style="color: #fff;">{{ product.name }}</a></h2>
+                <p style="color: #ccc;">{{ product.short_description }}</p>
+                <p style="color: #fff;">Цена: ${{ product.price }}</p>
                 <img src="{{ product.image.url }}" alt="{{ product.name }}">
             </li>
         {% endfor %}
     </ul>
 </body>
-
-
 </html>

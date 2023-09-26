@@ -4,56 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Домашняя страница</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
         body {
-            background-color: #B0C4DE;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
             padding: 20px;
-            font-family: 'Roboto', sans-serif; /* Изменим шрифт на Roboto */
-            color: #000;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
             margin: 0;
         }
 
         nav {
             background-color: #333;
-            text-align: center;
+            text-align: left;
+            padding: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            display: flex;
-            justify-content: space-between; /* Распределяем кнопки по всей ширине */
         }
 
         li {
             margin: 0;
+            display: inline;
         }
 
         .smooth-transition a {
             background-color: #333;
             color: #fff;
-            padding: 20px 60px; /* Увеличим размер кнопок в два раза (изначально было 20px 30px) */
+            padding: 20px 40px;
             border: none;
-            border-radius: 20px;
+            border-radius: 0;
             text-align: center;
             text-decoration: none;
             font-size: 18px;
-            margin: 10px;
+            margin-right: 10px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
-            flex: 1; /* Делаем, чтобы кнопки занимали всю доступную ширину */
+            border-top-right-radius: 20px; /* Закругляем верхний правый угол кнопки */
+            border-bottom-right-radius: 20px; /* Закругляем нижний правый угол кнопки */
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px
         }
 
         .smooth-transition a:hover {
             background-color: #B0C4DE;
             color: #333;
         }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #333; /* Цвет фона названия */
+            color: #fff; /* Цвет текста */
+            padding: 10px 20px; /* Внутренний отступ */
+            display: inline-block; /* Чтобы рамка обволакивала текст */
+            border-radius: 10px; /* Закругление углов */
+            box-shadow: 3px 3px 5px #888; /* Тень */
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1 style="font-size: 36px; color: #333;">Добро пожаловать на мой веб-сайт!</h1>
+        <h1>Название вашего бизнеса</h1>
     </header>
 
     <nav>
@@ -64,7 +82,6 @@
         </ul>
     </nav>
     <main>
-
         <p>Мы предлагаем широкий ассортимент продукции высокого качества. Познакомьтесь с нашими услугами и товарным предложением, а также свяжитесь с нами, чтобы узнать больше.</p>
     </main>
     <footer>
