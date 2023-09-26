@@ -7,6 +7,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('catalog/', views.catalog, name='catalog'),
+    path('product/<int:product_id>/', views.product_detail, name='product_detail'),
 ]
 # if settings.DEBUG:
     # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
