@@ -20,15 +20,15 @@
             background-color: #0077cc;
             color: #fff;
             padding: 10px 20px;
-            border-radius: 20px; /* Увеличил радиус для округлых краев */
+            border-radius: 20px;
             font-size: 20px;
             font-family: 'Montserrat', sans-serif;
-            transition: background-color 0.3s, color 0.3s; /* Переходы при наведении */
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .home-link:hover {
-            background-color: #0055aa; /* Изменен цвет фона при наведении */
-            color: #fff; /* Изменен цвет текста при наведении */
+            background-color: #0055aa;
+            color: #fff;
         }
 
         h1 {
@@ -57,13 +57,19 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             width: 300px;
             text-align: center;
-            transition: background-color 0.3s, transform 0.2s; /* Переходы при наведении */
-            cursor: pointer; /* Смена курсора при наведении */
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
         }
 
         li:hover {
-            background-color: #000066; /* Изменен цвет фона при наведении */
-            transform: scale(1.05); /* Увеличение размера при наведении */
+            background-color: #000066;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         h2 {
@@ -78,8 +84,8 @@
 
         img {
             max-width: 100%;
-            height: auto;
-            margin-top: 20px;
+            height: 250px;
+            margin-top: 10px;
             border-radius: 5px;
         }
     </style>
@@ -89,12 +95,14 @@
     <h1>Каталог товаров</h1>
     <ul>
         {% for product in products %}
-            <li>
-                <h2><a href="{% url 'product_detail' product.id %}" style="color: #fff;">{{ product.name }}</a></h2>
-                <p style="color: #ccc;">{{ product.short_description }}</p>
-                <p style="color: #fff;">Цена: ${{ product.price }}</p>
-                <img src="{{ product.image.url }}" alt="{{ product.name }}">
-            </li>
+            <a href="{% url 'product_detail' product.id %}">
+                <li>
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.short_description }}</p>
+                    <p>Цена: ${{ product.price }}</p>
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                </li>
+            </a>
         {% endfor %}
     </ul>
 </body>
