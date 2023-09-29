@@ -5,66 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <style>
-        /* {% load static %} */
         body {
-            background-color: #f0f0f0;
+            background-color: #000033; /* Космический синий цвет фона */
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url("{% static 'con.jpg' %}");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        h1, p {
+            color: #fff; /* Белый цвет текста */
             text-align: center;
-            background-color: #000033; /* Космический цвет фона без прозрачности */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #fff; /* Белый цвет текста */
-        }
-
-        p {
-            font-size: 18px;
-            color: #fff; /* Белый цвет текста */
-        }
-
-        .about-image {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
         }
 
         .home-link {
-            display: block;
-            margin-top: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
             text-decoration: none;
             background-color: #0077cc;
             color: #fff;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .home-link:hover {
+            background-color: #0055aa;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Контакты</h1>
-        <p>Свяжитесь с нами по следующим контактам:</p>
-
-        <p>Телефон: +7 (123) 456-7890</p>
-        <p>Email: info@example.com</p>
-        <p>Адрес: ул. Примерная, 12345, Примерный город</p>
-
-        <a class="home-link" href="{% url 'home' %}">Перейти на главную страницу</a>
-    </div>
+    <a class="home-link" href="{% url 'home' %}">На главную</a>
+    <h1>Контакты</h1>
+    <p>Свяжитесь с нами по следующим контактам:</p>
+    <p>Телефон: +7 (123) 456-7890</p>
+    <p>Email: info@example.com</p>
+    <p>Адрес: ул. Примерная, 12345, Примерный город</p>
 </body>
 </html>
